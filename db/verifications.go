@@ -9,7 +9,6 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-// TODO: terminar
 func ExisteUsuario(email string) (bool, models.Usuario, string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()

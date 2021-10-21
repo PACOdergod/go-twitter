@@ -20,8 +20,9 @@ func Manejadores() {
 	// cuando en el navegador se busque /registros
 	// se mandara a llamar la funcion que se le pase
 	// pero la peticion debe ser POST
-	router.HandleFunc("/registro", middleware.ChequeoDB(routes.Registro)).
-		Methods("POST")
+	router.HandleFunc("/registro", middleware.ChequeoDB(routes.Registro)).Methods("POST")
+
+	router.HandleFunc("/login", middleware.ChequeoDB(routes.Login)).Methods("POST")
 
 	// sirve para saber si la maquina tiene ya seteado
 	// algun puerto, si no lo tiene lo seteo
